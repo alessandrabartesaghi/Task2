@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script_client">
+    <sys_script_client action="DELETE">
+        <active>true</active>
+        <applies_extended>false</applies_extended>
+        <condition/>
+        <description/>
+        <field>date</field>
+        <global>true</global>
+        <isolate_script>true</isolate_script>
+        <messages/>
+        <name>DateRestriction</name>
+        <order/>
+        <script><![CDATA[function onChange(control, oldValue, newValue, isLoading, isTemplate) {
+   if (isLoading || newValue === '') {
+      return;
+   }
+	
+var date = new Date();
+	
+var dateEntered = new Date(getDateFromFormat(g_form.getValue('end_date'), g_user_date_time_format));
+	
+	if (dataEntered < date){
+		alert ('Date must be in the future');
+		
+		g_form.clearValue('end_date');
+	}
+   
+}]]></script>
+        <sys_class_name>sys_script_client</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-07-06 13:19:05</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>37be205d1b2419108b464196bc4bcb54</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>DateRestriction</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Task2 App" source="x_845663_task2_app">ee78e8911b2419108b464196bc4bcb7a</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Task2 App">ee78e8911b2419108b464196bc4bcb7a</sys_scope>
+        <sys_update_name>sys_script_client_37be205d1b2419108b464196bc4bcb54</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-07-06 13:20:16</sys_updated_on>
+        <table>x_845663_task2_app_event</table>
+        <type>onChange</type>
+        <ui_type>10</ui_type>
+        <view/>
+    </sys_script_client>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Task2 App">ee78e8911b2419108b464196bc4bcb7a</application>
+        <file_path/>
+        <instance_id>ce6ed79edb4cc01442b321c405961909</instance_id>
+        <instance_name>dev93827</instance_name>
+        <name>sys_script_client_37be205d1b2419108b464196bc4bcb54</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update sys_domain="global" table="sys_script_client"&gt;&lt;sys_script_client action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;applies_extended&gt;false&lt;/applies_extended&gt;&lt;condition/&gt;&lt;description/&gt;&lt;field&gt;date&lt;/field&gt;&lt;global&gt;true&lt;/global&gt;&lt;isolate_script&gt;true&lt;/isolate_script&gt;&lt;messages/&gt;&lt;name&gt;DateRestriction&lt;/name&gt;&lt;order/&gt;&lt;script&gt;&lt;![CDATA[function onChange(control, oldValue, newValue, isLoading, isTemplate) {
+   if (isLoading || newValue === '') {
+      return;
+   }
+	
+var date = new Date();
+	
+var dateEntered = new Date(getDateFromFormat(g_form.getValue('end_date'), g_user_date_time_format));
+	
+	if (dataEntered &lt; date){
+		alert ('Date must be in the future');
+		
+		g_form.clearValue('end_date');
+	}
+   
+}]]&gt;&lt;/script&gt;&lt;sys_class_name&gt;sys_script_client&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2022-07-06 13:19:05&lt;/sys_created_on&gt;&lt;sys_domain&gt;global&lt;/sys_domain&gt;&lt;sys_domain_path&gt;/&lt;/sys_domain_path&gt;&lt;sys_id&gt;37be205d1b2419108b464196bc4bcb54&lt;/sys_id&gt;&lt;sys_mod_count&gt;2&lt;/sys_mod_count&gt;&lt;sys_name&gt;DateRestriction&lt;/sys_name&gt;&lt;sys_overrides/&gt;&lt;sys_package display_value="Task2 App" source="x_845663_task2_app"&gt;ee78e8911b2419108b464196bc4bcb7a&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Task2 App"&gt;ee78e8911b2419108b464196bc4bcb7a&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_script_client_37be205d1b2419108b464196bc4bcb54&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-07-06 13:20:16&lt;/sys_updated_on&gt;&lt;table&gt;x_845663_task2_app_event&lt;/table&gt;&lt;type&gt;onChange&lt;/type&gt;&lt;ui_type&gt;10&lt;/ui_type&gt;&lt;view/&gt;&lt;/sys_script_client&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>-324554506</payload_hash>
+        <record_name>DateRestriction</record_name>
+        <reverted_from/>
+        <source>3e78e8911b2419108b464196bc4bcb7c</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-07-06 13:20:16</sys_created_on>
+        <sys_id>b7d27c1d1b2419108b464196bc4bcbb4</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>181d3ab21910000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-07-06 13:20:16</sys_updated_on>
+        <type>Client Script</type>
+        <update_guid>ffd27c1d10241910c3f72c7d29eeeeb3</update_guid>
+        <update_guid_history>ffd27c1d10241910c3f72c7d29eeeeb3:-324554506,49d238990324191048cd31d965fa874c:1219339064,1a92b411a26419103fe9a2b62f449d46:-122330610</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-07-06 13:25:25</sys_created_on>
+        <sys_db_object display_value="" name="sys_script_client">sys_script_client</sys_db_object>
+        <sys_id>f069e29afd4a4188ac3c8e2208ba5840</sys_id>
+        <sys_metadata>37be205d1b2419108b464196bc4bcb54</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>DateRestriction</sys_name>
+        <sys_package display_value="Task2 App" source="x_845663_task2_app">ee78e8911b2419108b464196bc4bcb7a</sys_package>
+        <sys_parent display_value="Event ">d509e0d51b2419108b464196bc4bcb5b</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="Task2 App">ee78e8911b2419108b464196bc4bcb7a</sys_scope>
+        <sys_scope_delete display_value="">06f099e270f84f65805984794c6e50a1</sys_scope_delete>
+        <sys_update_name>sys_script_client_37be205d1b2419108b464196bc4bcb54</sys_update_name>
+        <sys_update_version display_value="sys_script_client_37be205d1b2419108b464196bc4bcb54">b7d27c1d1b2419108b464196bc4bcbb4</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-07-06 13:25:25</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>
